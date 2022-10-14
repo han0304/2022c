@@ -8,8 +8,8 @@
 
 
 # Week06
-## step01-0_九九乘法表
-考試九九乘法表 考前複習 考後檢討同學出錯的狀況
+## step01-0
+考試九九乘法表、考前複習、考後檢討同學出錯的狀況。
 ```cpp
 #include <stdio.h>
 int main()
@@ -23,7 +23,7 @@ int main()
 }
 ```
 ## step01-1_畫星星-金字塔
-使用的技巧,是先用左手i來建立鷹架
+使用的技巧,是先用左手i來建立鷹架。
 ```cpp
 //上周的畫星星
 // ***** 鷹架 5
@@ -39,12 +39,13 @@ int main()
         printf("鷹架:%d樓 %d星\n",i,star);
     }
 }
-## step01-2_把5層樓的星星印出來
+## step01-2_金字塔
+有了鷹架樓層,接下來便是決定第i樓有幾個space空格,有幾個star星星,找到規律,便能寫出公式,並利用迴圈基礎型,輕鬆把星星畫出來。
 ```cpp
 #include <stdio.h>
 int main()
 {
-    for(int i=1;i<=5;i++){
+    for(int i=1;i<=5;i++){ 
         int space=5-i;
         int star=i*2-1;
         for(int k=0;k<space;k++){
@@ -57,7 +58,7 @@ int main()
     }
 }
 ```
-## step01-3_找最大公因數
+## step02-1_想要分數約分,可以使用暴力法,去找到都整除的數字,就能約分了
 ```cpp
 #include <stdio.h>
 int main()
@@ -71,7 +72,7 @@ int main()
     printf("找到ans:%d",ans);
 }
 ```
-## step01-4_輾轉相除法
+## step02-2_介紹輾轉相除法
 ```cpp
 #include <stdio.h>
 int main()
@@ -89,7 +90,7 @@ int main()
     printf("中的是:%d",b);
 }
 ```
-## step01-5_除了0以外的都成立
+## step02_除了0以外的都成立
 ```cpp
 #include <stdio.h>
 int main()
