@@ -153,3 +153,50 @@ int main()
     printf("答案是:%lld/n",b);
 }
 ```
+## step02-3_long long int剝皮法
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n=123456789;
+    printf("個位數是%d\n",n%10);
+    n=n/10;
+
+    printf("個位數是%d\n",n%10);
+    n=n/10;
+
+    printf("個位數是%d\n",n%10);
+    n=n/10;
+
+    printf("個位數是%d\n",n%10);
+    n=n/10;
+
+    printf("個位數是%d\n",n%10);
+    n=n/10;
+
+    printf("個位數是%d\n",n%10);
+    n=n/10;
+
+    printf("個位數是%d\n",n%10);
+    n=n/10;
+
+    printf("個位數是%d\n",n%10);
+    n=n/10;
+
+    printf("個位數是%d\n",n%10);
+    n=n/10;
+}
+```
+## step02-4_long long int倒過來剝皮法
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n=1234;
+
+    while(n>0){
+        printf("個位數是%d\n",n%10);
+        n=n/10;
+    }
+}
+```
