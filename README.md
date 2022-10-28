@@ -200,7 +200,7 @@ int main()
     }
 }
 ```
-#week08
+# Week08
 ##step01-1_2個 while迴圈 來畫出直角三角形
 ```cpp
 #include <stdio.h>
