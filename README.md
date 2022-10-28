@@ -200,3 +200,72 @@ int main()
     }
 }
 ```
+#week08
+##step01-1_2個 while迴圈 來畫出直角三角形
+```cpp
+#include <stdio.h>
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	for(int i=1;i<=n;i++){
+		for(int k=1;k<=n;k++){
+			if(k<=n-i)printf(" ");
+			else printf("*");
+		}
+		printf("\n");
+	}
+}
+```
+##step02-1_for改成 while迴圈來畫出直角三角形
+```cpp
+#include <stdio.h>
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	int i=1;
+	while(i<=n){
+		int k=1;
+		while (k<=n){
+			if(k<=n-i)printf(" ");
+			else printf("*");
+			k++;
+		}
+	printf("\n");
+	i++;
+	}
+}
+```
+##step02-2_利用 int bad=0判斷是否為質數
+```cpp
+#include <stdio.h>
+int main()
+{
+    printf("要判斷你輸入的數字是不是孤獨的質數:");
+    int n;
+    scanf("%d",&n);
+    int bad=0;
+    for(int i=2;i<n;i++){
+        if (n%i==0)bad=1;
+    }
+    if(bad==0)printf("%d是質數(沒有壞掉)",n);
+    else printf("%d不是質數(早就壞掉)",n);
+}
+```
+##step02-3_"列出質數" 用 for迴圈列出 2到a 的所有質數
+```
+#include <stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    for(int n=2;n<=a;n++){
+        int bad=0;
+        for(int i=2;i<n;i++){
+            if(n%i==0) bad=1;
+        }
+        if(bad==0)printf("%d ",n);
+    }
+}
+```
