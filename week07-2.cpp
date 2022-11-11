@@ -1,12 +1,12 @@
 #include <stdio.h>
 int main()
 {
-    long long int a,b;///«Üªø«Üªøªº¾ã¼Æa,b
+    long long int a,b;///å¾ˆé•·å¾ˆé•·çš„æ•´æ•¸a,b
     scanf("%lld %lld",&a,&b);
     long long int ans;
-    ///¥h¸Õ1,2,3,......a¬Ý¯à¤£¯à©Ma b ¾ã°£
-    for(long long int i=1;i<-a;i++){
+    ///åŽ»è©¦1,2,3,......açœ‹èƒ½ä¸èƒ½å’Œa b æ•´é™¤
+    for(long long int i=1;i<=a;i++){
         if (a%i==0&&b%i==0)ans=i;
     }
-    printf("µª®×¬O%lld\n",ans);
+    printf("ç­”æ¡ˆæ˜¯%lld\n",ans);
 }
