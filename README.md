@@ -302,7 +302,7 @@ int main()
 }
 ```
 # Week11
-##step01-1_ int temp=a; a=b; b=temp;
+##step01-1_ int temp=a; a=b; b=temp; a=90 b=80互換
 ```cpp
 ///兩數想交換,口訣:int temp=a;a=b;b=temp;
 #include <stdio.h>
@@ -316,4 +316,27 @@ int main()
     printf("a:%d b:%d\n",a,b);
 }
 ```
-##step01-2_
+##step01-2_abc互換
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a=90,b=80,c=70;
+    if(a>b){
+        int temp=a;
+        a=b;
+        b=temp;
+    }
+    if(b>c){
+        int temp=b;
+        b=c;
+        c=temp;
+    }
+    if(a>b){
+        int temp=a;
+        a=b;
+        b=temp;
+    }
+    printf("a:%d b:%d c:%d",a,b,c);
+}
+```
