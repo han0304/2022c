@@ -621,3 +621,21 @@ int main()
     printf("addnum(2,3)會得到%d\n",ans);
 }
 ```
+# Week14
+##step01-1_變數的範圍
+```cpp
+#include <stdio.h>
+int a=10;
+void func()
+{
+    a=30;
+    printf("func()中 a改成:%d\n",a);
+}
+int main()
+{
+    printf("main()中 a是:%d\n",a);
+    func();
+    printf("main()中 a是:%d\n",a);
+}
+```
+##
