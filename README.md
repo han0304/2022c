@@ -682,6 +682,23 @@ int main()
 ##step02-2_輾轉相除法
 ```cpp
 #include <stdio.h>
+int main()
+{
+    int a,b,c;
+    scanf("%d%d",&a,&b);
+    while(1){
+        c=a%b;
+        printf("%d %d %d\n",a,b,c);
+        if(c==0)break;
+        a=b;
+        b=c;
+    }
+    printf("%d",b);
+}
+```
+##step02-3_利用函式呼叫函式的方式, 來計算「輾轉相除法」找最大公因數
+```cpp
+#include <stdio.h>
 int gcd(int a, int b)
 {
     if(a==0) return b;
