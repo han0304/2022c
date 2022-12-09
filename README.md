@@ -638,4 +638,61 @@ int main()
     printf("main()中 a是:%d\n",a);
 }
 ```
-##
+##step01-2_local變數的修改,不會動到global變數
+```cpp
+#include <stdio.h>
+int a=10;
+void func()
+{
+    int a=20;
+    printf("func()裡的a是:%d\n",a);
+    a=30;
+    printf("func()中 a改成:%d\n",a);
+}
+int main()
+{
+    printf("main()中 a是:%d\n",a);
+    func();
+    printf("main()中 a是:%d\n",a);
+}
+```
+##step02-1_函式的參數傳遞
+```cpp
+#include <stdio.h>
+int n=30;
+int funcA(int a,int b)
+{
+    printf("funcA()的a,b是:%d %d\n",a,b);
+    return a + b;
+}
+int funcB(int n)
+{
+    printf("funcB() 的 n 是:%d\n",n);
+    int ans=funcA(n, n);
+    return ans;
+}
+int main()
+{
+    int a=10,b=20;
+    funcB(b);
+    funcA(a,b);
+    printf("main()的a,b是%d %d\n",a,b);
+}
+```
+##step02-2_輾轉相除法
+```cpp
+#include <stdio.h>
+int gcd(int a, int b)
+{
+    if(a==0) return b;
+    if(b==0) return a;
+    return gcd(b,a%b);
+}
+int main()
+{
+    int a,b;
+    scanf("%d%d",&a,&b);
+    int ans=gcd(a,b);
+    printf("%d",ans);
+}
+```
