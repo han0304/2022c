@@ -713,3 +713,32 @@ int main()
     printf("%d",ans);
 }
 ```
+# Week15
+##step01-1_字串
+```cpp
+#include <stdio.h>
+int main()
+{
+    printf("Hello World\n");
+    char line []="Hello World";
+    printf("整數 %d\n",100);
+    printf("浮點數 %f\n",3.141592653589793238462643383279);
+    printf("%s 字串\n",line);
+}
+```
+##step02-1_使用 %c 及 %d
+```cpp
+#include <stdio.h>
+int main()
+{
+    printf("%c : %d\n",65,65);
+    printf("%c : %d\n",66,66);
+    printf("%c : %d\n",67,67);
+    printf("%c : %d\n",'A','A');
+    printf("%c : %d\n",'B','B');
+    printf("%c : %d\n",'C','C');
+    printf("上面用數字 64 及單引號 'a' 的結果都一樣\n");
+    printf("%c : %d\n",97,97);
+    printf("%c : %d\n",'a','a');
+}
+```
