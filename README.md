@@ -742,3 +742,38 @@ int main()
     printf("%c : %d\n",'a','a');
 }
 ```
+##step02-2_字串的迴圈
+```cpp
+#include <stdio.h>
+int main()
+{
+    printf("=%c=%d=\n",65,65);
+    printf("=%c=%d=\n",'+','+');
+    printf("=%c=%d=\n",'\n','\n');
+    printf("=%c=%d=\n",'\t','\t');
+    printf("=%c=%d=\n",'\0','\0');
+    char line []="Hello World AAA";
+    for(int i=0;       ;i++){
+        char c=line[i];
+        if(c==0)break;
+        printf("=%c",c);
+    }
+}
+```
+##step03-1_字串反印
+```cpp
+#include <stdio.h>
+char line [3000];
+int main()
+{
+    printf("請輸入一堆字母,不要有空格哦: ");
+    scanf("%s",line);
+    int N=0;
+    for(int i=0;line[i]!=0;i++){
+        N++;
+    }
+    for(int i=N-1;i>=0;i--){
+        printf("%c",line[i]);
+    }
+}
+```
