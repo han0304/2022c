@@ -794,3 +794,43 @@ int main()
     char*p4=&c;
 }
 ```
+##step02-1_strlen() 字串長度length, strcpy()  字串複製copy,  strcmp() 字串比較compare
+```cpp
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char line [20]="Hello";
+    int N=strlen(line);
+    printf("Hello字串的長度%d\n",N);
+    char line2[20];
+    strcpy(line2,line);
+    printf("line2 得到: %s\n",line2);
+    printf("比較字串 strcmp(line, line2) 得到 %d\n",strcmp(line, line2));
+}
+```
+##step02-2_股票最佳買點與賣點
+```cpp
+#include <stdio.h>
+int a[2000];
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	for(int i=0;i<n;i++){
+		scanf("%d",&a[i]);
+	}
+	int max=-99999999,buy,sell;
+	for(int i=0;i<n;i++){
+		for(int j=i+1;j<n;j++){
+			if(a[j]-a[i]>max){
+				max=a[j]-a[i];
+				buy=i;
+				sell=j;
+			}
+		}
+	}
+	printf("請按任意鍵繼續 . . . \n");
+	printf("最大利潤=%d-%d=%d\n",a[sell],a[buy],max);
+}
+```
