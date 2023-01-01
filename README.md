@@ -834,3 +834,90 @@ int main()
 	printf("最大利潤=%d-%d=%d\n",a[sell],a[buy],max);
 }
 ```
+# Week17
+##step01-1
+```cpp
+void setup(){
+  size(400,400);
+  background(#EAFF0D);
+}
+void draw(){
+  if(mousePressed){
+    line(mouseX,mouseY,pmouseX,pmouseY);
+  }
+}
+void keyPressed(){
+  if(key=='1') stroke(255,0,0);
+  if(key=='2') stroke(0,255,0);
+  if(key=='3') stroke(0,0,255);
+}
+```
+##step01-2_互動小畫家
+```cpp
+void setup(){
+  size(400,400);
+  background(#EAFF0D);
+}
+void draw(){
+  if(mousePressed){
+    line(mouseX,mouseY,pmouseX,pmouseY);
+  }
+}
+void keyPressed(){
+  if(key=='1') stroke(255,0,0);
+  if(key=='2') stroke(0,255,0);
+  if(key=='3') stroke(0,0,255);
+}
+```
+##step01-3_用 box(100) 畫3D的box
+```cpp
+void setup(){
+  size(400,400,P3D);
+}
+void draw(){
+  background(#EAFF0D);
+  translate(width/2,height/2);
+  rotateY( radians(frameCount) );
+  box(100);
+}
+```
+##step02-1_圖片
+```cpp
+PImage img;
+void setup(){
+  size(400,400);
+  img=loadImage("image.png");
+}
+void draw(){
+  background(255,0,0);
+  image(img, 0, 0);
+}
+```
+##step02-2_不只一張圖片
+```cpp
+PImage img,img2,imgBG;
+void setup(){
+  size(400,400);
+  imgBG = loadImage("BG.png");
+  img = loadImage("astro.png");
+  img2 = loadImage("image2.png");
+}
+void draw(){
+  imageMode(CENTER);
+  image(imgBG,200,200,400,400);//background(0,255,0);
+  image(img2,100,100);
+  image(img,mouseX,mouseY);
+}
+```
+##step03-1_音檔
+```cpp
+import processing.sound.*;
+SoundFile file;
+void setup(){
+  size(300,300);
+  file = new SoundFile(this,"beat.aiff");
+  file.loop();
+}
+void draw(){
+}
+```
