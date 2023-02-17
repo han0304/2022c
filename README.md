@@ -921,3 +921,86 @@ void setup(){
 void draw(){
 }
 ```
+# Week01
+##step01-1_畫出可愛的愛心
+```cpp
+//(x*x+y*y-1)^3 - x*x*y*y*y < 0 裡面
+size(400, 400);//視窗大小
+fill(255, 0, 0);//red
+noStroke();//不要用外框的stroke
+//ellipse(200, 200, 100, 150);//先試橢圓
+for(int i=0; i<400; i++){  //左手i 對應 y座標
+  for(int j=0; j<400; j++){//右手j 對應 x座標
+    //要把 大的座標 j,i換成數學 -2~+2的x,y
+    //0...400減200變-200..+200在除200.0-1..+1
+    float x=(j-200)/100.0;
+    float y=-(i-200)/100.0;
+    if( (x*x+y*y-1)*(x*x+y*y-1)*(x*x+y*y-1)- x*x*y*y*y<0){
+      ellipse( j, i, 2, 2 );
+    }
+  }
+}
+```
+##step02-1_用CodeBlocks讀入字元、整數
+```cpp
+#include <stdio.h>
+int main()
+{
+    printf("請輸入字母: ");
+    char c;
+    scanf("%c",&c);
+    printf("你輸入 %c\n",c);
+    printf("請輸入整數: ");
+    int a;
+    scanf("%d",&a);
+    printf("你輸入 %d\n",a);
+}
+```
+##step02-2_使用 %s 而且宣告的 char line[40]; 對應的scanf()裡不用加&符號
+```cpp
+#include <stdio.h>
+int main()
+{
+    char c;
+    printf("請輸入字串: ");
+    char line[40];
+    scanf("%s",line);
+    printf("你讀入了:%s\n",line);
+}
+```
+##step02-3_迴圈前面int ans=0; 迴圈中間 ans++; 迴圈後面 ans印出來
+```cpp
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+	char line[40];
+	scanf("%s",line);
+	int ans=0;
+	int N=strlen(line);
+	for(int i=0; i<N; i++){
+		if(line[i]=='2')ans++;
+	}
+	printf("%d\n",ans);
+}
+```
+##step03-1_迴圈前面 int total=0; 迴圈中間 total += ans; 迴亃後面total印出來, 完成
+```cpp
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+	char line[40];
+	int total=0;
+	while(scanf("%s",line)==1){
+		int ans=0;
+		int N=strlen(line);
+		for(int i=0; i<N; i++){
+			if(line[i]=='2')ans++;
+		}
+	printf("%d\n",ans);
+	total +=ans;
+	}
+	printf("Total: %d\n",total);
+}
+```
