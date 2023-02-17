@@ -201,7 +201,7 @@ int main()
 }
 ```
 # Week08
-##step01-1_2個 while迴圈 來畫出直角三角形
+## step01-1_2個 while迴圈 來畫出直角三角形
 ```cpp
 #include <stdio.h>
 int main()
@@ -217,7 +217,7 @@ int main()
 	}
 }
 ```
-##step02-1_for改成 while迴圈來畫出直角三角形
+## step02-1_for改成 while迴圈來畫出直角三角形
 ```cpp
 #include <stdio.h>
 int main()
@@ -237,7 +237,7 @@ int main()
 	}
 }
 ```
-##step02-2_利用 int bad=0判斷是否為質數
+## step02-2_利用 int bad=0判斷是否為質數
 ```cpp
 #include <stdio.h>
 int main()
@@ -253,7 +253,7 @@ int main()
     else printf("%d不是質數(早就壞掉)",n);
 }
 ```
-##step02-3_"列出質數" 用 for迴圈列出 2到a 的所有質數
+## step02-3_"列出質數" 用 for迴圈列出 2到a 的所有質數
 ```
 #include <stdio.h>
 int main()
@@ -270,7 +270,7 @@ int main()
 }
 ```
 # Week10
-##step01-1_陣列宣告
+## step01-1_陣列宣告
 ```cpp
 ///step1-1
 #include <stdio.h>
@@ -285,7 +285,7 @@ int main()
     printf("a[3]:%d\n",a[3]);
 }
 ```
-#step02-1_陣列怎麼正著印、倒著印
+## step02-1_陣列怎麼正著印、倒著印
 ```cpp
 #include <stdio.h>
 int main()
@@ -302,7 +302,7 @@ int main()
 }
 ```
 # Week11
-##step01-1_ int temp=a; a=b; b=temp; a=90 b=80互換
+## step01-1_ int temp=a; a=b; b=temp; a=90 b=80互換
 ```cpp
 ///兩數想交換,口訣:int temp=a;a=b;b=temp;
 #include <stdio.h>
@@ -316,7 +316,7 @@ int main()
     printf("a:%d b:%d\n",a,b);
 }
 ```
-##step01-2_abc互換
+## step01-2_abc互換
 ```cpp
 #include <stdio.h>
 int main()
@@ -340,7 +340,7 @@ int main()
     printf("a:%d b:%d c:%d",a,b,c);
 }
 ```
-##step02-1_從左到右巡一輪,兩兩比較,不對就交換
+## step02-1_從左到右巡一輪,兩兩比較,不對就交換
 ```cpp
 ///2數 => 2種結果
 ///3數 => 6種結果
@@ -368,7 +368,7 @@ int main()
     printf("\n");
 }
 ```
-##step02-2_貼很多次
+## step02-2_貼很多次
 ```cpp
 #include <stdio.h>
 int a[10]={90, 80, 70, 60, 50, 40, 30, 20, 10, 0};
@@ -407,7 +407,7 @@ int main()
     printf("\n");
 }
 ```
-##step03-1_泡泡排序法
+## step03-1_泡泡排序法
 ```cpp
 #include <stdio.h>
 int a[10]={90, 80, 70, 60, 50, 40, 30, 20, 10, 0};
@@ -430,7 +430,7 @@ int main()
 }
 ```
 # Week12
-##step01-1_Selection Sort 選擇排序法, 口訣 左手i 右手j, 不對就交換
+## step01-1_Selection Sort 選擇排序法, 口訣 左手i 右手j, 不對就交換
 ```cpp
 ///排序-選擇排序Selectiom Sort
 ///口訣:左手i 右手j
@@ -449,7 +449,7 @@ int main(){
     for(int i=0;i<5;i++)printf("%d ",a[i]);
 }
 ```
-##step02-2_從簡單的整數宣告、整數宣告並給初始值、陣列宣告、陣列宣告並給初始值、二維陣列宣告、二維陣列宣告並初始值, 小心右邊給值時, 是用大括號
+## step02-2_從簡單的整數宣告、整數宣告並給初始值、陣列宣告、陣列宣告並給初始值、二維陣列宣告、二維陣列宣告並初始值, 小心右邊給值時, 是用大括號
 ```cpp
 #include <stdio.h>
 int main()
@@ -463,7 +463,7 @@ int main()
     ///宣告二維陣列 左手i 右手j
 }
 ```
-##step02_2_把二維陣列拿來用, 配合2層迴圈
+## step02_2_把二維陣列拿來用, 配合2層迴圈
 ```cpp
 #include <stdio.h>
 int main()
@@ -478,7 +478,7 @@ int main()
     }
 }
 ```
-##step03-1_矩陣加法
+## step03-1_矩陣加法
 ```cpp
 #include <stdio.h>
 int main()
@@ -509,7 +509,7 @@ int main()
 	}
 }
 ```
-##step03-2_矩陣乘法
+## step03-2_矩陣乘法
 ```cpp
 #include <stdio.h>
 int main()
@@ -544,7 +544,7 @@ int main()
 }
 ```
 # Week13
-##step01-1_買賣股票的最佳時機
+## step01-1_買賣股票的最佳時機
 ```cpp
 #include <stdio.h>
 int a[100];
@@ -570,7 +570,7 @@ int main()
 	printf("最大利潤=%d-%d=%d\n",right,left,ans);
 }
 ```
-##step02-1_a[i] = a[i-1] + a[i-2];
+## step02-1_a[i] = a[i-1] + a[i-2];
 ```cpp
 #include <stdio.h>
 int a[50];
@@ -586,7 +586,7 @@ int main()
     }
 }
 ```
-##step02-3_矩陣轉180度
+## step02-3_矩陣轉180度
 ```cpp
 #include <stdio.h>
 int a[200][200];
@@ -608,7 +608,7 @@ int main()
 	}
 }
 ```
-##step03-1_function函式
+## step03-1_function函式
 ```cpp
 #include <stdio.h>
 int addnum(int a,int b)
@@ -622,7 +622,7 @@ int main()
 }
 ```
 # Week14
-##step01-1_變數的範圍
+## step01-1_變數的範圍
 ```cpp
 #include <stdio.h>
 int a=10;
@@ -638,7 +638,7 @@ int main()
     printf("main()中 a是:%d\n",a);
 }
 ```
-##step01-2_local變數的修改,不會動到global變數
+## step01-2_local變數的修改,不會動到global變數
 ```cpp
 #include <stdio.h>
 int a=10;
@@ -656,7 +656,7 @@ int main()
     printf("main()中 a是:%d\n",a);
 }
 ```
-##step02-1_函式的參數傳遞
+## step02-1_函式的參數傳遞
 ```cpp
 #include <stdio.h>
 int n=30;
@@ -679,7 +679,7 @@ int main()
     printf("main()的a,b是%d %d\n",a,b);
 }
 ```
-##step02-2_輾轉相除法
+## step02-2_輾轉相除法
 ```cpp
 #include <stdio.h>
 int main()
@@ -696,7 +696,7 @@ int main()
     printf("%d",b);
 }
 ```
-##step02-3_利用函式呼叫函式的方式, 來計算「輾轉相除法」找最大公因數
+## step02-3_利用函式呼叫函式的方式, 來計算「輾轉相除法」找最大公因數
 ```cpp
 #include <stdio.h>
 int gcd(int a, int b)
@@ -714,7 +714,7 @@ int main()
 }
 ```
 # Week15
-##step01-1_字串
+## step01-1_字串
 ```cpp
 #include <stdio.h>
 int main()
@@ -726,7 +726,7 @@ int main()
     printf("%s 字串\n",line);
 }
 ```
-##step02-1_使用 %c 及 %d
+## step02-1_使用 %c 及 %d
 ```cpp
 #include <stdio.h>
 int main()
@@ -742,7 +742,7 @@ int main()
     printf("%c : %d\n",'a','a');
 }
 ```
-##step02-2_字串的迴圈
+## step02-2_字串的迴圈
 ```cpp
 #include <stdio.h>
 int main()
@@ -760,7 +760,7 @@ int main()
     }
 }
 ```
-##step03-1_字串反印
+## step03-1_字串反印
 ```cpp
 #include <stdio.h>
 char line [3000];
@@ -778,7 +778,7 @@ int main()
 }
 ```
 # Week16
-##step01-1_了解 scanf()
+## step01-1_了解 scanf()
 ```cpp
 #include <stdio.h>
 int main()
@@ -794,7 +794,7 @@ int main()
     char*p4=&c;
 }
 ```
-##step02-1_strlen() 字串長度length, strcpy()  字串複製copy,  strcmp() 字串比較compare
+## step02-1_strlen() 字串長度length, strcpy()  字串複製copy,  strcmp() 字串比較compare
 ```cpp
 #include <stdio.h>
 #include <string.h>
@@ -809,7 +809,7 @@ int main()
     printf("比較字串 strcmp(line, line2) 得到 %d\n",strcmp(line, line2));
 }
 ```
-##step02-2_股票最佳買點與賣點
+## step02-2_股票最佳買點與賣點
 ```cpp
 #include <stdio.h>
 int a[2000];
@@ -835,7 +835,7 @@ int main()
 }
 ```
 # Week17
-##step01-1
+## step01-1
 ```cpp
 void setup(){
   size(400,400);
@@ -852,7 +852,7 @@ void keyPressed(){
   if(key=='3') stroke(0,0,255);
 }
 ```
-##step01-2_互動小畫家
+## step01-2_互動小畫家
 ```cpp
 void setup(){
   size(400,400);
@@ -869,7 +869,7 @@ void keyPressed(){
   if(key=='3') stroke(0,0,255);
 }
 ```
-##step01-3_用 box(100) 畫3D的box
+## step01-3_用 box(100) 畫3D的box
 ```cpp
 void setup(){
   size(400,400,P3D);
@@ -881,7 +881,7 @@ void draw(){
   box(100);
 }
 ```
-##step02-1_圖片
+## step02-1_圖片
 ```cpp
 PImage img;
 void setup(){
@@ -893,7 +893,7 @@ void draw(){
   image(img, 0, 0);
 }
 ```
-##step02-2_不只一張圖片
+## step02-2_不只一張圖片
 ```cpp
 PImage img,img2,imgBG;
 void setup(){
@@ -909,7 +909,7 @@ void draw(){
   image(img,mouseX,mouseY);
 }
 ```
-##step03-1_音檔
+## step03-1_音檔
 ```cpp
 import processing.sound.*;
 SoundFile file;
@@ -922,7 +922,7 @@ void draw(){
 }
 ```
 # Week01
-##step01-1_畫出可愛的愛心
+## step01-1_畫出可愛的愛心
 ```cpp
 //(x*x+y*y-1)^3 - x*x*y*y*y < 0 裡面
 size(400, 400);//視窗大小
@@ -941,7 +941,7 @@ for(int i=0; i<400; i++){  //左手i 對應 y座標
   }
 }
 ```
-##step02-1_用CodeBlocks讀入字元、整數
+## step02-1_用CodeBlocks讀入字元、整數
 ```cpp
 #include <stdio.h>
 int main()
@@ -956,7 +956,7 @@ int main()
     printf("你輸入 %d\n",a);
 }
 ```
-##step02-2_使用 %s 而且宣告的 char line[40]; 對應的scanf()裡不用加&符號
+## step02-2_使用 %s 而且宣告的 char line[40]; 對應的scanf()裡不用加&符號
 ```cpp
 #include <stdio.h>
 int main()
@@ -968,7 +968,7 @@ int main()
     printf("你讀入了:%s\n",line);
 }
 ```
-##step02-3_迴圈前面int ans=0; 迴圈中間 ans++; 迴圈後面 ans印出來
+## step02-3_迴圈前面int ans=0; 迴圈中間 ans++; 迴圈後面 ans印出來
 ```cpp
 #include <stdio.h>
 #include <string.h>
@@ -984,7 +984,7 @@ int main()
 	printf("%d\n",ans);
 }
 ```
-##step03-1_迴圈前面 int total=0; 迴圈中間 total += ans; 迴亃後面total印出來, 完成
+## step03-1_迴圈前面 int total=0; 迴圈中間 total += ans; 迴亃後面total印出來, 完成
 ```cpp
 #include <stdio.h>
 #include <string.h>
