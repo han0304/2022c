@@ -1047,6 +1047,19 @@ int main()
 ## step02-2_C++的輸入、輸出
 ```cpp
 #include <iostream>
+int main()
+{
+	long long int a,b;
+	while(std::cin >> a >> b){
+		long long int ans = a - b;
+		if(ans<0) ans = b - a;
+		std::cout << ans <<std::endl;
+	}
+}
+```
+## step02-3_ using namespace std;
+```cpp
+#include <iostream>
 using namespace std;
 int main()
 {
