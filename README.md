@@ -1004,3 +1004,43 @@ int main()
 	printf("Total: %d\n",total);
 }
 ```
+# Week02
+## step01-1_Hashmat the brave warrior 
+```cpp
+#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)==2){
+		int ans=b-a;
+		printf("%d\n",ans);
+	}
+}
+```
+## step01-2_可能會遇到負的
+```cpp
+#include <stdio.h>
+int main()
+{
+	int a,b;
+	while(scanf("%d%d",&a,&b)==2){
+		int ans=b-a;
+		if(a>b) ans=a-b;
+		if(b>a) ans=b-a;
+		printf("%d\n",ans);
+	}
+}
+```
+## step02-1_很長很長的整數
+```cpp
+#include <stdio.h>
+int main()
+{
+	long long int a,b;
+	while(scanf("%lld%lld",&a,&b)==2){
+		long long int ans=b-a;
+		if(ans<0) ans=a-b;
+		printf("%lld\n",ans);
+	}
+}
+```
