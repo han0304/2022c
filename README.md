@@ -1211,3 +1211,92 @@ int main()
 	}
 }
 ```
+# Week04
+## step01-1_ 印出值及它們的位址
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a=10;
+    printf("a的值是%d\n",a);
+    printf("a的家在%d\n",&a);
+
+    int b=20;
+    printf("b的值是%d\n",b);
+    printf("b的家在%d\n",&b);
+
+    int c=30;
+    printf("a的值是%d\n",c);
+    printf("a的家在%d\n",&c);
+}
+```
+##  step02-1_指標變數 pointer to int 寫法是 int *p = &a 裡面會放 a的位址
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a=10;
+    printf("a在哪裡? %d\n",&a);
+    int *p=&a;
+    printf("指標p心裡放的值是&a 也就是%d\n",p);
+    printf("p指到的那一個盒子的值是:%\n",*p);
+}
+```
+## step02-2_2個指標的版本
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a=10,b=20;
+    int * p1 = &a;
+    int * p2 = &b;
+    printf("p1指到的變數的值是%d\n",*p1);
+    printf("p2指到的變數的值是%d\n",*p2);
+    p1=p2;
+    printf("p1指到的變數的值是%d\n",*p1);
+    printf("p2指到的變數的值是%d\n",*p2);
+}
+```
+## step02-3_
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a=10,b=20;
+    int *p1,*p2;
+    printf("a:%d b:%d\n",a,b);
+
+    p1=&a;
+    *p1=99;
+    printf("a:%d b:%d\n",a,b);
+
+    p2=p1;
+    *p2=77;
+    printf("a:%d b:%d\n",a,b);
+}
+```
+## 
+```cpp
+#include <stdio.h>
+int main()
+{
+    int used[26]={0,0,0,0};
+    char c;
+    while(scanf("%c",&c)==1){
+        if(c>='A' && c<='Z'){
+            int i=c-'A';
+            used[i] ++;
+        }
+        if(c>='a' && c<='z'){
+            int i=c-'a';
+            used[i] ++;
+        }
+    }
+    int bad=0;
+    for(int i=0;i<26;i++){
+        if(used[i]==0)bad=1;
+    }
+    if(bad==0)printf("Yes");
+    else printf("No");
+}
+```
