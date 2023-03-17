@@ -1300,3 +1300,61 @@ int main()
     else printf("No");
 }
 ```
+# Week05
+## step01-1_看到指標、陣列, 都拿來當陣列使用
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a[10]={1,2,3,4,5,6,7,8,9,10};
+    int * p=a;
+    for(int i=0;i<10;i++){
+        printf("a[i]:%d -- p[i]:%d\n",a[i],p[i]);
+    }
+}
+```
+## step02-1_LeetCode的第9題
+```cpp
+bool isPalindrome(int x){
+    if(x<0)return false;
+
+    //x:1234567 r:0
+    //        7   7 = 0*10  +7
+    //       6   76 = 7*10  +6
+    //      5   765 = 76*10 +5
+    //     4   7654 = 765*10+4
+    int x2=x;
+    long long int r=0;
+    while(x>0){
+        r=r*10+x%10;
+        //printf("x:%d r:%d\n",x,r);
+
+        x=x/10;
+    }
+    if(r==x2)return true;
+    else return false;
+}
+```
+## step03-1_ int removeDuplicate(int *nums, int numSize)函式
+```cpp
+#include <stdio.h>
+int removeDuplicates(int* nums, int numsSize){
+    int k=1;
+    for(int i=1;i<numsSize; i++){
+        if(nums[i]==nums[i-1])continue;
+        else{
+            nums[k]=nums[i];
+            k++;
+        }
+    }
+    return k;
+}
+int main()
+{
+    int a[10]={0,0,1,1,1,2,2,3,3,4};
+    int k=removeDuplicates(a,10);
+    for(int i=0;i<k;i++){
+        printf("%d",a[i]);
+    }
+}
+```
