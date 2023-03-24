@@ -1421,4 +1421,16 @@ int main()
     }
 }
 ```
-## 
+## step03-2_C++ 的 algorithm 裡的 std::sort(a, a+10)可以把 int a[10] 裡的前10項拿來排序
+```cpp
+#include <stdio.h>
+#include <algorithm>
+int a[10]={9,8,7,1,2,3,6,5,4,0};
+int main()
+{
+    std::sort(a, a+10);
+    for(int i=0;i<10;i++){
+        printf("%d ",a[i]);
+    }
+}
+```
