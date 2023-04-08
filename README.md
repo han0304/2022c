@@ -1434,3 +1434,91 @@ int main()
     }
 }
 ```
+# Week08
+## step01-1_C++好用的「vector」
+```cpp
+#include <stdio.h>
+#include <vector>
+using namespace std;
+int main()
+{
+    vector<int> a(3);
+
+    a[0] = 100;
+    a[1] = 101;
+    a[2] = 102;
+    for(int i=0;i<3;i++){
+        printf("%d ",a[i]);
+    }
+}
+```
+## step01-2_C++的vector有另外一種宣告的方法
+```cpp
+#include <stdio.h>
+#include <vector>
+using namespace std;
+int main()
+{
+    int a1[10]={9,8,7,1,2,3,6,5,4,0};
+    vector<int> a2(a1,a1+10);
+
+    for(int i=0;i<10;i++){
+        printf("%d ",a2[i]);
+    }
+}
+```
+## step02-1_vector可以伸縮, 利用 push_back(放值)可以越來越長
+```cpp
+#include <stdio.h>
+#include <vector>
+using namespace std;
+int main()
+{
+    vector<int> a(2);
+    a[0] = 100;
+    a[1] = 101;
+    for(int i=0;i<a.size();i++){
+        printf("%d ",a[i]);
+    }
+    printf("現在的 a 的大小是: %d\n",a.size());
+
+    a.push_back(102);
+    a.push_back(103);
+    a.push_back(0);
+    for(int i=0;i<a.size();i++){
+        printf("%d ",a[i]);
+    }
+    printf("現在的 a 的大小是: %d\n",a.size());
+}
+```
+## step02-2_第1題 1480 Running Sum of 1d Array```## step02-2_
+```cpp
+class Solution {
+public:
+    vector<int> runningSum(vector<int>& nums) {
+        int N = nums.size();
+        vector<int> ans(N);
+
+        ans[0] = nums[0];
+        for(int i=1; i<N; i++){
+            ans[i] = ans[i-1] + nums[i];
+        }
+        return ans;
+    }
+};
+```
+##  step03-1_
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    for(int i=1;i<=n;i++){
+        int space=n-i,star=i*2-1;
+        for(int k=1;k<=space;k++)printf(" ");
+        for(int k=1;k<=star;k++)printf("*");
+        printf("\n");
+    }
+}
+```
