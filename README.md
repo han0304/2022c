@@ -1555,3 +1555,24 @@ public:
     }
 };
 ```
+##  step02-1_LeetCode 136單一數字
+```cpp
+int singleNumber(int* nums, int numsSize){
+    int ans=0;
+    for(int i=0; i<numsSize; i++){
+        ans = ans ^ nums[i];
+    }
+    return ans;
+}
+```
+## step02-2_LeetCode 191 Numbers of 1 Bits
+```cpp
+int hammingWeight(uint32_t n){
+    int ans=0;
+    while(n>0){
+        if(n%2==1)ans++;
+        n = n / 2;
+    }
+    return ans;
+}
+```
