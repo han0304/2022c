@@ -1522,3 +1522,36 @@ int main()
     }
 }
 ```
+# Week10
+## step01-1_LeetCode 1768
+```cpp
+char * mergeAlternately(char * word1, char * word2){
+    char * ans = (char*) malloc(201);
+
+    int N1 = strlen(word1);
+    int N2 = strlen(word2);
+
+    int N=0;
+    for(int i=0; i<200; i++){
+        if(i<N1) ans[N++] = word1[i];
+        if(i<N2) ans[N++] = word2[i];
+    }
+    ans[N] = 0;
+
+    return ans;
+}
+```
+## step01-2_改用 C++
+```cpp
+class Solution {
+public:
+    string mergeAlternately(string word1, string word2) {
+        string ans;
+        for(int i=0; i<100; i++){
+            if(i<word1.length()) ans += word1[i];
+            if(i<word2.length()) ans += word2[i];
+        }
+        return ans;
+    }
+};
+```
