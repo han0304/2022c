@@ -7,7 +7,7 @@ for(int i=0; i<300; i++){
     float y = -(i-150)/20.0;
     float xxyy = (x*x+y*y-1);
     if( xxyy * xxyy * xxyy - x*x*y*y*y <0){
-      ellipse( j+50, i-100, 5, 5);
+      ellipse( j-50, i-100, 5, 5);
     }
   }
 }
